@@ -1,2 +1,21 @@
 body {
 }
+
+#main-menu li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
+
+button {
+	background-color: yellow;
+	color: red;
+	border: 1px solid red;
+	width: 75px;
+	height: 25px;
+	margin: 3px;
+}
+
+button:hover {
+	background-color: blue;
+}

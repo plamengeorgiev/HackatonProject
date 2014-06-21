@@ -23,15 +23,15 @@ function onRecycleButtonClick(){
         var button = document.createElement('button');
         button.value=garbageBins[i].name;
         button.addEventListener('click', loadInfoInInfoContainer(garbageBins[i]));
-        $sideMenu.append(button);
+        $sideMenu.add(button);
     };
 
     function loadInfoInInfoContainer(garbageBin){
         var $infoDiv = document.createElement('div');
         $infoDiv.text=garbageBin.content;
-        $infoContainer.append($infoDiv);
+        $infoContainer.add($infoDiv);
     }
-    $container.append($sideMenu);
-    $container.append($infoContainer);
+    $container.add($sideMenu);
+    $container.add($infoContainer);
 }
 $('#recycle').click(onRecycleButtonClick());
