@@ -266,7 +266,7 @@ $(document).ready(function () {
             article.append(infoTitile);
             article.append(infoImg);
             for (var j = 0; j < disaster.eventInfo[i].text.length; j++) {
-                article.append($('<p/>').text.(disaster.eventInfo[i].text[j]));
+                article.append($('<p/>').text(disaster.eventInfo[i].text[j]));
             }
 
             div.append(article);
