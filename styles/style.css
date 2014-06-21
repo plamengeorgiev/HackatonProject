@@ -36,6 +36,7 @@ button:hover {
 
 .info-container {
 	display: inline-block;
+	overflow: scroll;
 	width: 70%;
 	margin: 5px;
 	float: right
