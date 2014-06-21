@@ -25,7 +25,7 @@ $(document).on('click', '#recycle', onRecycleBtnClick);
         var $wrapper = $('#wrapper');
 		$wrapper.empty();
         var $sideMenu = createSideMenu();
-        var $selectedDisaster = createEventContent(garbageBins[0]);
+        var $selectedDisaster = createContent(garbageBins[0]);
 
         $sideMenu.on('click', getEventObject);
         $wrapper.append($sideMenu);
@@ -62,11 +62,11 @@ $(document).on('click', '#recycle', onRecycleBtnClick);
             var dataInfo = $target.attr('data-info');
             dataInfo = parseInt(dataInfo);
             console.log(dataInfo);
-            createEventContent(garbageBins[dataInfo]);
+            createContent(garbageBins[dataInfo]);
         }
     }
 
-    function createEventContent(garbageBin) {
+    function createContent(garbageBin) {
         var div = $('<div />').addClass('info-container');
 
         var eventTitile = $('<h2 />').html(garbageBin.name).addClass('garbage-bin-color');
