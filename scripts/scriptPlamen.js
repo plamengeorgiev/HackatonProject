@@ -23,18 +23,15 @@ function onRecycleButtonClick(){
         var button = document.createElement('button');
         button.value=garbageBins[i].name;
         button.addEventListener('click', loadInfoInInfoContainer(garbageBins[i]));
-        $sideMenu.appendChild(button);
+        $sideMenu.append(button);
     };
 
     function loadInfoInInfoContainer(garbageBin){
-        $infoContainer.clear();
         var $infoDiv = document.createElement('div');
         $infoDiv.text=garbageBin.content;
-        $infoContainer.appendChild($infoDiv);
+        $infoContainer.append($infoDiv);
     }
-
-
+    $container.append($sideMenu);
+    $container.append($infoContainer);
 }
-function addMainMenuEvents(){
-    $('#main-menu #recycle').addEventListener('click', onRecycleButtonClick);
-}
+$('#recycle').click(onRecycleButtonClick());
