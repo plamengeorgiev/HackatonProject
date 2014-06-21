@@ -26,6 +26,8 @@
     //    'Свлачище', 'Земетресение', 'Слънчево изригване', 'Топлинна вълна', 'Буря',
     //    'Гръмотевична буря', 'Студ']
 
+    onDisastersBtnClick();
+
     function onDisastersBtnClick(){
         var $wrapper = $('#wrapper');
         var $sideMenu = createSideMenu();
