@@ -16,6 +16,17 @@ button {
 	margin: 3px;
 }
 
+#wrapper .nav-list{
+    list-style-type: none;
+}
+
+
+#wrapper .side-btn{
+    width: 100px;
+    height: auto;
+    padding: 5px 10px;
+}
+
 button:hover {
 	background-color: blue;
 }
