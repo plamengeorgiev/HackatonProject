@@ -1,5 +1,11 @@
-(function () {
-    var disastersInfoBG = [
+$(document).ready(function () {
+	console.log('started');
+	$(document).on('click', '#disasterButton', function(){
+		onDisastersBtnClick();
+	});
+	
+})
+ var disastersInfoBG = [
         {
             eventType: 'Пожар',
             eventInfo: [
@@ -18,16 +24,15 @@
                 }
             ]
         }
-    ];
+];
 
-    var $listElement = $('<li />');
-    var $button = $('<button>');
-    // var disastersBG = ['Пожар', 'Епидемия', 'Наводнение', 'Лавина',
-    //    'Свлачище', 'Земетресение', 'Слънчево изригване', 'Топлинна вълна', 'Буря',
-    //    'Гръмотевична буря', 'Студ']
+ var $listElement = $('<li />');
+ var $button = $('<button>');
 
     function onDisastersBtnClick(){
+		console.log('buttonClicked');
         var $wrapper = $('#wrapper');
+		$wrapper.empty();
         var $sideMenu = createSideMenu();
         var $selectedDisaster = createEventContent(disastersInfoBG[0]);
 
@@ -91,5 +96,3 @@
 
         return div;
     }
-
-})();

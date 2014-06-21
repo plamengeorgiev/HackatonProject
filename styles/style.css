@@ -19,3 +19,24 @@ button {
 button:hover {
 	background-color: blue;
 }
+
+#wrapper {
+	display: inline; 
+}
+
+.side-nav {
+	display: inline-block; 
+	width: 25%;
+	margin: 5px;
+	float: left;
+}
+.nav-list li {
+	list-style-type: none;
+}
+
+.info-container {
+	display: inline-block;
+	width: 70%;
+	margin: 5px;
+	float: right
+}
