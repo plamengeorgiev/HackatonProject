@@ -17,8 +17,7 @@ $(document).on('click', '#recycle', onRecycleBtnClick);
             content: ' content content content'
         }
     ]
-
-<<<<<<< HEAD
+	
     var $listElement = $('<li />');
     var $button = $('<button>');
 
@@ -43,7 +42,7 @@ $(document).on('click', '#recycle', onRecycleBtnClick);
         for (var i = 0; i < garbageBins.length; i++) {
             var $currMenuBtn = $button.clone();
             $currMenuBtn.attr('data-info', i);
-            $currMenuBtn.text(garbageBins[i].eventType);
+            $currMenuBtn.text(garbageBins[i].name);
             $currMenuBtn.addClass('side-btn');
 
             var $currentListElement =  $listElement.clone();
@@ -76,8 +75,7 @@ $(document).on('click', '#recycle', onRecycleBtnClick);
         // content
         for (var i = 0; i < garbageBin.content; i += 1) {
             var article = $('<article />').addClass('garbage-bin-info');
-            var infoTitile = $('<h3 />').html(disaster.eventInfo[i].title).addClass('garbage-bin-color');
-            var infoText = $('<p />').html(disaster.eventInfo[i].text);
+            var infoText = $('<p />').html(garbageBin.content);
 
             article.append(infoTitile);
             article.append(infoImg);
@@ -87,23 +85,3 @@ $(document).on('click', '#recycle', onRecycleBtnClick);
 
         return div;
     }
-
-=======
-    for (i=0; i<garbageBins.length; i++)
-    {
-        var button = document.createElement('button');
-        button.value=garbageBins[i].name;
-        button.addEventListener('click', loadInfoInInfoContainer(garbageBins[i]));
-        $sideMenu.add(button);
-    };
-
-    function loadInfoInInfoContainer(garbageBin){
-        var $infoDiv = document.createElement('div');
-        $infoDiv.text=garbageBin.content;
-        $infoContainer.add($infoDiv);
-    }
-    $container.add($sideMenu);
-    $container.add($infoContainer);
-}
-$('#recycle').click(onRecycleButtonClick());
->>>>>>> origin/master
