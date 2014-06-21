@@ -5,9 +5,9 @@
             eventInfo: [
                 {
                     title: 'Основна информация',
-                    text: 'Пожарът е горене, разпространяващо се без контрол във времето и пространството, характеризиращо се с отделяне на топлина, придружено с дим или пламъци, или и двете (БДС ISO 8421 -1).'
-                        + 'Пожарът е сложен комплекс от физико-химични явления, в основата на които лежат нестационарни, т. е. изменящи се във времето процеси на горене, топло и масообмен.',
-                    imageSource: 'images/fire.png'
+                    text: ['Пожарът е горене, разпространяващо се без контрол във времето и пространството, характеризиращо се с отделяне на топлина, придружено с дим или пламъци, или и двете (БДС ISO 8421 -1).',
+                         'Пожарът е сложен комплекс от физико-химични явления, в основата на които лежат нестационарни, т. е. изменящи се във времето процеси на горене, топло и масообмен.'],
+                    imageSource: 'images/fire.jpg'
                 },{
                     title: 'Рискове',
                     text: '',
@@ -256,11 +256,14 @@
             var article = $('<article />').addClass('disaster-article');
             var infoTitile = $('<h3 />').html(disaster.eventInfo[i].title).addClass('disaster-title');
             var infoImg = $('<img />').attr('src', disaster.eventInfo[i].imageSource);
-            var infoText = $('<p />').html(disaster.eventInfo[i].text);
+            //vat infoText = [];
 
             article.append(infoTitile);
             article.append(infoImg);
-            article.append(infoText);
+            for (var j = 0; j < disaster.eventInfo.text.length; j++) {
+                article.append($('<p/>').text(disaster.eventInfo.html[j]));
+            }
+
             div.append(article);
         }
 
