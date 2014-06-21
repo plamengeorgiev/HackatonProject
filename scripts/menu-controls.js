@@ -128,15 +128,11 @@ function createContent(garbageBin) {
         div.append(eventTitile);
 
         // content
-        for (var i = 0; i < garbageBin.content; i += 1) {
             var article = $('<article />').addClass('garbage-bin-info');
             var infoText = $('<p />').html(garbageBin.content);
 
-            article.append(infoTitile);
-            article.append(infoImg);
             article.append(infoText);
             div.append(article);
-        }
 
         return div;
     }
