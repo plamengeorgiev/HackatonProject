@@ -17,6 +17,176 @@
                     imageSource: 'images/fire-to-do.png'
                 }
             ]
+        },{
+            eventType: 'Епидемия',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Наводнение',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Лавина',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Свлачище',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Земетресение',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Слънчево изригване',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Топлинна вълна',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Буря',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Гръмотевична буря',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
+        },{
+            eventType: 'Студ',
+            eventInfo: [
+                {
+                    title: 'Основна информация',
+                    text: '',
+                    imageSource: 'images/fire.png'
+                },{
+                    title: 'Рискове',
+                    text: '',
+                    imageSource: 'images/fire-risk.png'
+                },{
+                    title: 'Какво да правим?',
+                    text: '',
+                    imageSource: 'images/fire-to-do.png'
+                }
+            ]
         }
     ];
 
@@ -25,6 +195,8 @@
     // var disastersBG = ['Пожар', 'Епидемия', 'Наводнение', 'Лавина',
     //    'Свлачище', 'Земетресение', 'Слънчево изригване', 'Топлинна вълна', 'Буря',
     //    'Гръмотевична буря', 'Студ']
+
+    //onDisastersBtnClick();
 
     function onDisastersBtnClick(){
         var $wrapper = $('#wrapper');
@@ -61,12 +233,14 @@
 
     function getEventObject(ev){
         var $target = $(ev.target);
+        var $content = $(this).next();
+        $content.remove();
 
         if ($target.hasClass('side-btn')){
             var dataInfo = $target.attr('data-info');
             dataInfo = parseInt(dataInfo);
-            console.log(dataInfo);
-            createEventContent(disastersInfoBG[dataInfo]);
+
+            $('#wrapper').append(createEventContent(disastersInfoBG[dataInfo]));
         }
     }
 
