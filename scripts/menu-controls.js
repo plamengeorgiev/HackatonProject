@@ -2,7 +2,7 @@
 	console.log('started');
 	$(document).on('click', '#disasterButton', onDisastersBtnClick);
 
-	$(document).on('click', '#recycle', onRecycleBtnClick);
+	$(document).on('click', '#preview', onPreviewBtnClick);
 	
 })
 
@@ -28,28 +28,6 @@ function onDisastersBtnClick(){
 	});
     $wrapper.append($sideMenu);
     $wrapper.append($selectedDisaster);
-}
-
-function onRecycleBtnClick(){
-        var $wrapper = $('#wrapper');
-		$wrapper.empty();
-        var $sideMenu = createSideMenu(garbageBins);
-        var $selectedDisaster = createContent(garbageBins[0]);
-
-        $sideMenu.on('click', function(ev){
-			var $target = $(ev.target);
-			var $content = $(this).next();
-			$content.remove();
-
-			if ($target.hasClass('side-btn')){
-				var dataInfo = $target.attr('data-info');
-				dataInfo = parseInt(dataInfo);
-				console.log('reached; data info: ' + dataInfo);
-				$('#wrapper').append(createContent(garbageBins[dataInfo]));
-			}
-		});
-        $wrapper.append($sideMenu);
-        $wrapper.append($selectedDisaster);
 }
 
 function createSideMenu(array){
@@ -120,19 +98,3 @@ function createEventContent(disaster) {
 
 	return div;
 }
-
-function createContent(garbageBin) {
-        var div = $('<div />').addClass('info-container');
-
-        var eventTitile = $('<h2 />').html(garbageBin.name).addClass('garbage-bin-color');
-        div.append(eventTitile);
-
-        // content
-            var article = $('<article />').addClass('garbage-bin-info');
-            var infoText = $('<p />').html(garbageBin.content);
-
-            article.append(infoText);
-            div.append(article);
-
-        return div;
-    }
