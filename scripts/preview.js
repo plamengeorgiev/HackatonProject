@@ -56,17 +56,17 @@
 	{name: "Storm",
 	 reportCounts: 0,
 	 reported: false,
-	 alertIMG: '/images/bckgrnds/storm.jpg'
+	 alertIMG: 'images/bckgrnds/storm.jpg'
 	},
 	{name: "Fire",
 	 reportCounts: 0,
 	 reported: false,
-	 alertIMG: '/images/bckgrnds/fire.jpg'
+	 alertIMG: 'images/bckgrnds/fire.jpg'
 	},
 	{name: "Snow",
 	 reportCounts: 0,
 	 reported: false,
-	 alertIMG: '/images/bckgrnds/snow.jpg'
+	 alertIMG: 'images/bckgrnds/snow.jpg'
 	},
 	{name: "Flood",
 	 reportCounts: 0,
