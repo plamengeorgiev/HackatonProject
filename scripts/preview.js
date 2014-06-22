@@ -55,35 +55,43 @@
 	disasterReports = [
 	{name: "Storm",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: '../images/bckgrnds/storm.jpg'
 	},
 	{name: "Fire",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: '../images/bckgrnds/fire.jpg'
 	},
 	{name: "Snow",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: '../images/bckgrnds/snow.jpg'
 	},
 	{name: "Flood",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: 'images/bckgrnds/flood.jpg'
 	},
 	{name: "Winds",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: 'images/bckgrnds/winds.jpg'
 	},
 	{name: "Radiation",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: 'images/bckgrnds/radiation.jpg'
 	},
 	{name: "AirPollution",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: 'images/bckgrnds/airpollution.jpg'
 	},
 	{name: "Landslide",
 	 reportCounts: 0,
-	 reported: false
+	 reported: false,
+	 alertIMG: 'images/bckgrnds/landslide.jpg'
 	}
  ];
 }
@@ -153,7 +161,21 @@ function adminSubmitDisaster(){
 
 function reportDisaster(disaster){
 	console.log("WE HAVE A DISASTER: " + disaster);
-	
+	var $phonePanelLeft = $('.phone-panel-left'),
+		$alertDIV = $('<div/>');
+		alertText = '<strong>ALERT</strong> !<br/>'+ disaster.toUpperCase() + ' nearby!';
+		$alertImage = $('<img/>');
+	$phonePanelLeft.empty();
+	$phonePanelLeft.css({'background-color': 'white'});
+	for(var i = 0; i < disasterReports.length; i+=1){
+		if(disaster === disasterReports[i].name){
+			$alertImage.attr("src", disasterReports[i].alertIMG);
+		}
+	}
+	$alertDIV.addClass('alert-div');
+	$alertDIV.html(alertText);
+	$phonePanelLeft.append($alertImage);
+	$phonePanelLeft.append($alertDIV);
 }
 
 function showMainPanel(side){

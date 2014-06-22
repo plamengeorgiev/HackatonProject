@@ -116,7 +116,7 @@ h2 {
 	color: white;
 	text-align: center;
 	width: 250px;
-    height: 400px;
+    height: 450px;
 	float: left;
 	margin: 5px;
 }
@@ -126,7 +126,7 @@ h2 {
 	color: white;
 	text-align: center;
 	width: 250px;
-    height: 400px;
+    height: 450px;
 	float: right;
 	margin: 5px;
 }
@@ -149,7 +149,7 @@ h2 {
 	height: 120px;
 	background-image: url('../images/icons/reportButton.jpg');
 	background-repeat: no-repeat;
-	margin-top: 125px;
+	margin-top: 150px;
 
 }
 
@@ -299,4 +299,8 @@ left:60%;
 top:83%;
 font-size:38px;
 font-weight:bold;
+}
+
+.alert-div {
+	color: red;
 }
