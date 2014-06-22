@@ -28,13 +28,32 @@ button {
 
 #wrapper {
     width: 975px;
+   /* margin: 0 auto;
+    border: 0px solid #000;
+    background-color: whitesmoke;
+    display: block;*/
+    overflow: auto;
+    position:relative;
+    z-index:3;
+}
+footer {
+    width:975px;
+    height:50px;
+    top:50px;
+    position:relative;
+    font-size: 18px;
+    font-family: Calibri;
+    color: #403018;
+    text-align: center;
+    padding-top:10px;
+}
+#wrapper , footer{
     margin: 0 auto;
     border: 0px solid #000;
     background-color: whitesmoke;
     display: block;
-    overflow: auto;
+    border-radius: 10px;
 }
-
     #wrapper .nav-list {
         list-style-type: none;
     }
