@@ -1,8 +1,9 @@
 ﻿$(document).ready(function () {
 	console.log('started');
 	$(document).on('click', '#disasterButton', onDisastersBtnClick);
-
 	$(document).on('click', '#preview', onPreviewBtnClick);
+	$(document).on('click', '#about-us', onAboutBtnClick);
+	$(document).on('click', '#home', onHomeBtnClick);
 	
 })
 

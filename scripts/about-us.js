@@ -1,7 +1,7 @@
-﻿(function () {
+﻿function onAboutBtnClick() {
     var $container = $('#wrapper');
 
-    var $aboutAsBtn = $('#about-as');
+    var $aboutUsBtn = $('#about-as');
     var $title = $('<h2 />').text('Това е приложение за получаване на известия за настъпили или предстоящи бедствия.');
     var $image = $('<img />').attr('src', 'images/navodnenie.jpg');
     $image.addClass('img');
@@ -23,10 +23,8 @@
         $content.append(p);
     }
 
-    $aboutAsBtn.on('click', function () {
         $container.empty();
         $container.append($title);
         $container.append($image);
         $container.append($content);
-    });
-})();
+};
