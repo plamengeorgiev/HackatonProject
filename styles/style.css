@@ -169,9 +169,11 @@ h2 {
 
 .ul-report-left li{
 	list-style-type: none;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
-
+.ul-report-left li:nth-child(odd) {
+	margin-bottom: 5px;
+}
 .ul-report-left li button{
 	width: 35px;
 	height: 35px;
@@ -187,7 +189,11 @@ h2 {
 
 .ul-report-right li{
 	list-style-type: none;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.ul-report-right li:nth-child(odd) {
+	margin-bottom: 5px;
 }
 
 .ul-report-right li button{
