@@ -162,11 +162,15 @@ function adminSubmitDisaster(){
 function reportDisaster(disaster){
 	console.log("WE HAVE A DISASTER: " + disaster);
 	var $phonePanelLeft = $('.phone-panel-left'),
+		$phonePanelRight = $('.phone-panel-right'),
 		$alertDIV = $('<div/>');
 		alertText = '<strong>ALERT</strong> !<br/>'+ disaster.toUpperCase() + ' nearby!';
 		$alertImage = $('<img/>');
 	$phonePanelLeft.empty();
 	$phonePanelLeft.css({'background-color': 'white'});
+	
+	$phonePanelRight.empty();
+	$phonePanelRight.css({'background-color': 'white'});
 
 	for(var i = 0; i < disasterReports.length; i+=1){
 		if(disaster === disasterReports[i].name){
@@ -188,9 +192,14 @@ function reportDisaster(disaster){
 
 	$alertDIV.addClass('alert-div');
 	$alertDIV.html(alertText);
-	$phonePanelLeft.append($alertImage);
-	$phonePanelLeft.append($alertDIV);
-    $phonePanelLeft.append($alertButtons);
+	
+	$phonePanelLeft.append($alertImage.clone());
+	$phonePanelLeft.append($alertDIV.clone());
+    $phonePanelLeft.append($alertButtons.clone());
+	
+	$phonePanelRight.append($alertImage.clone());
+	$phonePanelRight.append($alertDIV.clone());
+    $phonePanelRight.append($alertButtons.clone());
 }
 
 function showMainPanel(side){

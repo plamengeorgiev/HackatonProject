@@ -135,6 +135,8 @@ h2 {
 }
 .continue-left, .continue-right{
 	margin-top: 100px;
+	background-image: url('../images/appbutton.jpg');
+	color: black;
 	width: 95%;
 	height: 50px;
 }
