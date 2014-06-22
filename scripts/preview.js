@@ -171,15 +171,30 @@ function reportDisaster(disaster){
 		$alertImage = $('<img/>');
 	$phonePanelLeft.empty();
 	$phonePanelLeft.css({'background-color': 'white'});
+
 	for(var i = 0; i < disasterReports.length; i+=1){
 		if(disaster === disasterReports[i].name){
 			$alertImage.attr("src", disasterReports[i].alertIMG);
+            break;
 		}
 	}
+
+    var $alertButtons = $('<div>');
+    $alertButtons.addClass('alert-btns');
+    $alertButtons.css('margin', '20px');
+    var $emergencyCall = $('<img>');
+    $emergencyCall.attr('src', 'images/icons/112.png');
+    var $helperBtn = $('<img>');
+    $helperBtn.attr('src', 'images/icons/info-icon.png');
+    $helperBtn.css('margin-left', '25px');
+    $alertButtons.append($emergencyCall);
+    $alertButtons.append($helperBtn);
+
 	$alertDIV.addClass('alert-div');
 	$alertDIV.html(alertText);
 	$phonePanelLeft.append($alertImage);
 	$phonePanelLeft.append($alertDIV);
+    $phonePanelLeft.append($alertButtons);
 }
 
 function showMainPanel(side){
