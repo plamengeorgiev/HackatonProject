@@ -19,14 +19,40 @@
 			case 'report-right':
 				showReportPanel("right");
 				break;
+			case 'report-Storm':
+				userReportEvent("Storm");
+				break;
+			case 'report-Fire':
+				userReportEvent("Fire");
+				break;
+			case 'report-Snow':
+				userReportEvent("Snow");
+				break;
+			case 'report-Flood':
+				userReportEvent("Flood");
+				break;
+			case 'report-Winds':
+				userReportEvent("Winds");
+				break;
+			case 'report-Radiation':
+				userReportEvent("Radiation");
+				break;
+			case 'report-AirPollution':
+				userReportEvent("AirPollution");
+				break;	
+			case 'report-Landslide':
+				userReportEvent("Landslide");
+				break;
 			default: break;
 		}
 	
-	});	
+	});
 })
  
+ var disasterReports;
  
- var disasterReports = [
+ function initializeArray(){
+	disasterReports = [
 	{name: "Storm",
 	 reportCounts: 0,
 	 reported: false
@@ -60,9 +86,11 @@
 	 reported: false
 	}
  ];
+}
 
 function onPreviewBtnClick(){
 	console.log('Preview Button Clicked');
+	initializeArray()
     var $wrapper = $('#wrapper');
 	$wrapper.empty();
 	var $container = $('<div/ >');
@@ -79,7 +107,7 @@ function createPhonePane(side){
 	var $phonePanel = $('<div/ >'),
 		className = 'phone-panel-' + side,
 		$disclaimer = $('<p/>'),
-		discText = "Authors do <strong>NOT</strong> carry any responsibility for misuse of this application. Users are <strong>ENTIRELY</strong> responsible about the way they use, or misuse, this application."+
+		discText = "Authors do <strong>NOT</strong> carry any responsibility for misuse of this application. Users are <strong>ENTIRELY</strong> responsible for the way they use, or misuse, this application."+
 					"It's <strong>STRONGLY</strong> advised that you do not report any non-existent disasters in order to prevent panic.",
 		$continueMenuBtn = $button.clone();
 	$phonePanel.addClass(className);
@@ -175,4 +203,19 @@ function showReportPanel(side){
 	$reportHolder.append($reportRight);
 	
 	$selectedPhone.append($reportHolder);
+}
+
+function userReportEvent(disaster){
+	for(var i = 0; i < disasterReports.length; i+=1){
+		if(disaster === disasterReports[i].name){
+			disasterReports[i].reportCounts +=1;
+			if(disasterReports[i].reportCounts >=3 && !disasterReports[i].reported){
+				reportDisaster(disasterReports[i].name);
+				disasterReports[i].reported = true;
+				break;
+			}
+			break;
+		}
+	}
+
 }
