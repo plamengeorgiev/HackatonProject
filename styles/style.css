@@ -14,7 +14,8 @@ nav {
     padding-right: 20px;
 }
 
-button {
+
+button  {
     background-image: url('../images/button_yellow.png');
     color: #877f4d;
     font-size: 16px;
@@ -239,4 +240,63 @@ h2 {
 .report-Landslide {
 	background-image: url('../images/icons/landslide.jpg');
 	background-repeat: no-repeat;
+}
+
+#innerDiv img{
+width:250px;
+height:150px;
+}
+
+#innerDiv{
+overflow:none;
+position:relative;
+background:none;
+background-image:url('../images/background.jpg');
+width:975px;
+height:475px;	
+}
+
+
+#picture1{
+position:absolute;
+left:20%;
+top:67%;
+border-radius:15px;
+}
+#picture2{
+
+position:absolute;
+border-radius:15px;
+left:40%;
+top:30%;
+}
+#picture3{
+
+position:absolute;
+border-radius:15px;
+left:5%;
+top:23%;
+}
+#picture4{
+
+position:absolute;
+border-radius:15px;
+left:70%;
+top:35%;
+}
+#div1{
+color:white;
+position:absolute;
+left:10%;
+top:3%;
+font-size:38px;
+font-weight:bold;
+}
+#div2{
+color:white;
+position:absolute;
+left:60%;
+top:83%;
+font-size:38px;
+font-weight:bold;
 }

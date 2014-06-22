@@ -1,6 +1,8 @@
 function onHomeBtnClick(){
 	var $wrapper = $('#wrapper');
 	$wrapper.empty();
+	var $innerDiv = $('<div/>');
+	$innerDiv.attr('id', "innerDiv");
 	
 	var $headlineDiv = $('<div/>');
 	$headlineDiv.attr('id', "div1");
@@ -24,12 +26,14 @@ function onHomeBtnClick(){
 	$picture4.attr('id', "picture4");
 
 	$headlineDiv.text('Имате ли готовност за нещо подобно?');
-	$wrapper.append($headlineDiv);
-	$wrapper.append($picture1);
-	$wrapper.append($picture2);
-	$wrapper.append($picture3);
-	$wrapper.append($picture4);
+	
+	$innerDiv.append($headlineDiv);
+	$innerDiv.append($picture1);
+	$innerDiv.append($picture2);
+	$innerDiv.append($picture3);
+	$innerDiv.append($picture4);
 	$subDiv.text('Бъдете подготвени!');
-	$wrapper.append($subDiv);
+	$innerDiv.append($subDiv);
+	$wrapper.append($innerDiv);
 }
 
