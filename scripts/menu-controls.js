@@ -4,7 +4,7 @@
 	$(document).on('click', '#preview', onPreviewBtnClick);
 	$(document).on('click', '#about-us', onAboutBtnClick);
 	$(document).on('click', '#home', onHomeBtnClick);
-	
+	onHomeBtnClick();
 })
 
 function onDisastersBtnClick(){

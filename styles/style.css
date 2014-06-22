@@ -51,7 +51,6 @@ footer {
 #wrapper , footer{
     margin: 0 auto;
     border: 0px solid #000;
-    background-color: whitesmoke;
     display: block;
     border-radius: 10px;
 }
@@ -248,19 +247,18 @@ height:150px;
 }
 
 #innerDiv{
-overflow:none;
 position:relative;
 background:none;
 background-image:url('../images/background.jpg');
 width:975px;
-height:475px;	
+height:435px;	
 }
 
 
 #picture1{
 position:absolute;
 left:20%;
-top:67%;
+top:57%;
 border-radius:15px;
 }
 #picture2{
@@ -268,27 +266,27 @@ border-radius:15px;
 position:absolute;
 border-radius:15px;
 left:40%;
-top:30%;
+top:20%;
 }
 #picture3{
 
 position:absolute;
 border-radius:15px;
 left:5%;
-top:23%;
+top:13%;
 }
 #picture4{
 
 position:absolute;
 border-radius:15px;
 left:70%;
-top:35%;
+top:25%;
 }
 #div1{
 color:white;
 position:absolute;
 left:10%;
-top:3%;
+top:0%;
 font-size:38px;
 font-weight:bold;
 }
@@ -296,7 +294,21 @@ font-weight:bold;
 color:white;
 position:absolute;
 left:60%;
-top:83%;
+top:73%;
 font-size:38px;
 font-weight:bold;
 }
+
+footer ul li {
+    display:inline-block;
+    list-style-type:none;
+}
+#footericons #academy {
+        width:100px;
+    }
+
+#footericons img {
+    width:30px;
+    height:30px;
+}
+
